@@ -1,0 +1,70 @@
+<div *ngIf="isLoading">
+    <p-progressSpinner class="spinner"></p-progressSpinner>
+</div>
+<div>
+    <div class="card" style="background-color: black;">
+        <br>
+        <h2 class="textAlignCenter" style="font-family: Arial, Helvetica, sans-serif; color: blanchedalmond;"> SMS
+            Fullstack
+            Challenge</h2>
+        <br>
+    </div>
+    <!-- <div class="card">
+    <div class="p-fluid p-grid">
+        <label>Range</label>
+            <div class="p-col-3">
+                <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
+            </div>
+            <div class="p-col-3">
+                <button pButton pRipple type="button" label="Filter Data" class="p-button-raised p-button-text" (click)="filterData()"></button>
+            </div>
+    </div>
+    </div> -->
+
+    <h3 class="textAlignCenter" style="color: cadetblue; font-family: Arial, Helvetica, sans-serif;">Dyanamic table data
+        seeded from data.json file to H2 Database, and retriving using RestAPI</h3>
+    <br>
+    <div class="p-grid p-formgrid p-fluid" *ngIf="!isLoading">
+        <div class="p-col-12 p-lg-4">
+            <div class="card">
+                <p-table [value]="data" styleClass="p-datatable-striped">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <!-- <th pSortableColumn="id">Id <p-sortIcon field="id"></p-sortIcon></th> -->
+                            <th pSortableColumn="city" style="color: coral;">City <p-sortIcon field="city"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="start_date" style="color: coral;">Start Date <p-sortIcon
+                                    field="start_date"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="end_date" style="color: coral;">End Date <p-sortIcon field="end_date">
+                                </p-sortIcon>
+                            </th>
+                            <th pSortableColumn="price" style="color: coral;">Prioce <p-sortIcon field="price">
+                                </p-sortIcon>
+                            </th>
+                            <th pSortableColumn="status" style="color: coral;">Status <p-sortIcon field="status">
+                                </p-sortIcon>
+                            </th>
+                            <th pSortableColumn="color" style="color: coral;">Color <p-sortIcon field="color">
+                                </p-sortIcon>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-obj>
+                        <tr>
+                            <!-- <td>{{obj.id}}</td> -->
+                            <td>{{obj.city}}</td>
+                            <td>{{obj.start_date}}</td>
+                            <td>{{obj.end_date}}</td>
+                            <td>{{obj.price}}</td>
+                            <td>{{obj.status}}</td>
+                            <td>{{obj.color}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast position="top-right" key="success" [showTransitionOptions]="'1000ms'" [hideTransitionOptions]="'10000ms'">
+</p-toast>
