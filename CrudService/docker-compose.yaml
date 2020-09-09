@@ -1,0 +1,9 @@
+version: '3'
+services:
+  crudservice:
+    image: crudservice:1
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+    - 8080:8080
