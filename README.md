@@ -1,6 +1,6 @@
 # SMSFullstackChallenge
 
-  ## For starting backend service please follow below steps.
+  ## For backend setup please follow below steps.
     1. Go to /CrudService directory
     2. Fire command: mvn clean install
     3. Go to /target directory
