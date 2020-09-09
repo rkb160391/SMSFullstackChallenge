@@ -14,6 +14,14 @@
     4. Ui project is up and running on default port : 4200
     5. Check http://localhost:4200 
     
+# Note :
+   # filtering out the data on the basis of the date is not possible because of inconsistency and incorrect data.
+   # dockerfile and docker-compose file are not tested because I havn't docker environment locally.
+   # if you find any dificulties while setup please let me know.
+   
+   Thanks & Regards,
+   Ravi Baghel
+    
     
     
     
